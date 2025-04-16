@@ -4,6 +4,10 @@ export default defineConfig({
 	test: {
 		globals: true,
 		environment: "jsdom",
-		// setupFiles: './src/__tests__/setup.ts',
-	},
+		deps: {
+			// This will prevent Vitest from transforming or handling these modules
+			// effectively ignoring any ESM compatibility issues
+			inline: [/@gooddata\/.*/],
+		}
+	}
 });
