@@ -1,10 +1,10 @@
 import React from "react";
 import "./assets/styles/main.css";
 
-import { addAttributeFilter } from "@gooddata/sdk-ui-dashboard";
+import { isCustomWidget } from "@gooddata/sdk-ui-dashboard";
 
-export const x = () => {
-	return addAttributeFilter();
+export const methodFromSDK = () => {
+	return isCustomWidget({});
 };
 
 const App: React.FC = () => {
